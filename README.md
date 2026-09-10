@@ -1,2 +1,3 @@
-# Cyber-security-week-1-project-
-In this I set up a kali Linux lab for my week 1 project 
+CYBERSECURITY LAB  ENVIRONMENT SETUP
+Creating a Kali Linux Lab for penetration testing and ethical hacking
+kali linux v2026.2 Network Nat Network
