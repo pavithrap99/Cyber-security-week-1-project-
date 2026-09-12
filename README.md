@@ -61,8 +61,10 @@ The main objectives of this project are to:
 ## Steps to implement the kali linux lab
 ### step 1.Install 7-zip
 To extract the kali Linux VM package install the 7-zip file.
-### step 2.Install Virtual Box
+### step 2.Install Virtual Box and Kali linux
 virtual box was installed to run the Kali Linux in Virtual Machine.It was a hyperveisor.
+## Screenshot
+![Kali Linux]()
 ### step 3.VB NAT Network Configuration
 A dedicated VB NAT Network was created with the configuration.
 
@@ -109,7 +111,7 @@ ping -c 4 8.8.8.8
 
 **Result:Internet connectivity confirmed**
 ## screenshot
-![ping Test]()
+![ping Test](https://github.com/pavithrap99/Cyber-security-week-1-project-/blob/55a0307255f5adfe774447a89e70d0c75d3cc190/04-ping-test.png)
 ## Verification & Testing
 
 | Verification Item | Status | Verification Method | Outcome |
