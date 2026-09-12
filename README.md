@@ -93,7 +93,7 @@ ip addr show eth0
 ```
 ### Result:IP address 10.0.0.2/24 confirmed on interface etho
 ## screenshot
-
+![IP Address]()
 
 
 ### Step5.Gateway and Internet Connectivity validation
