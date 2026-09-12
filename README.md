@@ -76,7 +76,8 @@ A dedicated VB NAT Network was created with the configuration.
 
 **IPv6:Disabled**
 ## Screenshot
-![Network Configuration](02_Nat_network-settings.png)
+![NAT Network Settings](02_Nat network-settings.png)
+
 ### Step 4.IP Address Assignment
 The Kali Linux network was configured with a static IP address
 ```bash
