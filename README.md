@@ -93,8 +93,7 @@ ip addr show eth0
 ```
 ### Result:IP address 10.0.0.2/24 confirmed on interface etho
 ## screenshot
-![IP Address]()
-
+![IP Address](https://github.com/pavithrap99/Cyber-security-week-1-project-/blob/d8ab08c06fd35020674169b03d50d3b0c1783910/03_IP%20address.png)
 
 ### Step5.Gateway and Internet Connectivity validation
 ICMP echo request were used to validate connectivity to the configuration.
@@ -110,7 +109,7 @@ ping -c 4 8.8.8.8
 
 **Result:Internet connectivity confirmed**
 ## screenshot
-
+![ping Test]()
 ## Verification & Testing
 
 | Verification Item | Status | Verification Method | Outcome |
