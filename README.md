@@ -76,7 +76,7 @@ A dedicated VB NAT Network was created with the configuration.
 
 **IPv6:Disabled**
 ## Screenshot
-![NAT Network Settings](02_Nat network-settings.png)
+![NAT Network Settings](https://github.com/pavithrap99/Cyber-security-week-1-project-/blob/de90b9bec4169e425a9e1ab9bd72356278b28141/02_Nat%20network-settings.png)
 
 ### Step 4.IP Address Assignment
 The Kali Linux network was configured with a static IP address
@@ -93,6 +93,7 @@ ip addr show eth0
 ```
 ### Result:IP address 10.0.0.2/24 confirmed on interface etho
 ## screenshot
+
 
 
 ### Step5.Gateway and Internet Connectivity validation
