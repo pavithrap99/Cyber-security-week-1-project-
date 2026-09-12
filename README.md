@@ -50,7 +50,7 @@ The main objectives of this project are to:
 
 | Parameter | Value | Description |
 |---|---|---|
-| **NAT Network** | `CyberLab-Network` | Dedicated VirtualBox network for the lab |
+| **NAT Network** | `NAT network` | Dedicated VirtualBox network for the lab |
 | **IPv4 Subnet** | `10.0.0.0/24` | Private network range used by the lab |
 | **NAT Gateway** | `10.0.0.1` | Gateway providing network access |
 | **Kali Workstation IP** | `10.0.0.2` | Static address assigned to the Kali VM |
@@ -76,15 +76,73 @@ A dedicated VB NAT Network was created with the configuration.
 
 **IPv6:Disabled**
 ## Screenshot
-
-![Network Configuration](02_Natnetwork-settings.png)
-
+![Network Configuration](02_Nat_network-settings.png)
 ### Step 4.IP Address Assignment
 The Kali Linux network was configured with a static IP address
-**sudo ip addr add 10.0.0.2/24 dev eth0**
-**sudo ip link set eth0 up
+```bash
+# Assign static IP address to eth0 interface
+sudo ip addr add 10.0.0.2/24 dev eth0
+#Activate the network interface
+sudo ip link set eth0 up
+```
 ### verification
-**ip addr show eth0
+''' base
+#confirm IP assignment
+ip addr show eth0
+'''
 ### Result:IP address 10.0.0.2/24 confirmed on interface etho
 ## screenshot
+
+
+### Step5.Gateway and Internet Connectivity validation
+ICMP echo request were used to validate connectivity to the configuration.
+```bash
+# Test Gateway connectivity
+ping -c 4 10.0.0.1
+```
+```bash
+# Test Internet connectivity
+ping -c 4 8.8.8.8
+```
+
+**Result: Gateway responed successfully**
+
+**Result:Internet connectivity confirmed**
+## screenshot
+
+##Verification & Testing
+Verification Item
+Status
+Verification Method
+Outcome
+Ethernet Interface Check
+✅ Passed
+ip addr show eth0
+Interface detected with 10.0.0.2/24
+IP Address Validation
+✅ Passed
+ip -4 addr show eth0
+Static IPv4 address verified
+Routing Configuration
+✅ Passed
+ip route
+Default route through 10.0.0.1 verified
+Local Gateway Test
+✅ Passed
+ping -c 4 10.0.0.1
+Successful replies received from gateway
+External Network Test
+✅ Passed
+ping -c 4 8.8.8.8
+External connectivity successfully verified
+NAT Network Verification
+✅ Passed
+VirtualBox → Network Manager
+NatNetwork configured and active
+Network Availability
+✅ Passed
+ip link show eth0
+Ethernet interface confirmed operational
+
+
 
