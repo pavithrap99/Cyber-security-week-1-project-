@@ -64,4 +64,27 @@ To extract the kali Linux VM package install the 7-zip file.
 ### step 2.Install Virtual Box
 virtual box was installed to run the Kali Linux in Virtual Machine.It was a hyperveisor.
 ### step 3.VB NAT Network Configuration
+A dedicated VB NAT Network was created with the configuration.
+
+**Configuration:**
+
+**Network Name: NAT Network**
+
+**IPv4 Prefix:10.0.0.0/24**
+
+**DHCP:Enabled**
+
+**IPv6:Disabled**
+## Screenshot
+
+![Network Configuration](02_Nat network-settings.png)
+
+### Step 4.IP Address Assignment
+The Kali Linux network was configured with a static IP address
+**sudo ip addr add 10.0.0.2/24 dev eth0**
+**sudo ip link set eth0 up
+### verification
+**ip addr show eth0
+### Result:IP address 10.0.0.2/24 confirmed on interface etho
+## screenshot
 
