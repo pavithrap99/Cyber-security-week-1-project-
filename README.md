@@ -86,10 +86,10 @@ sudo ip addr add 10.0.0.2/24 dev eth0
 sudo ip link set eth0 up
 ```
 ### verification
-''' base
+```base
 #confirm IP assignment
 ip addr show eth0
-'''
+```
 ### Result:IP address 10.0.0.2/24 confirmed on interface etho
 ## screenshot
 
@@ -104,45 +104,67 @@ ping -c 4 10.0.0.1
 # Test Internet connectivity
 ping -c 4 8.8.8.8
 ```
-
 **Result: Gateway responed successfully**
 
 **Result:Internet connectivity confirmed**
 ## screenshot
 
-##Verification & Testing
-Verification Item
-Status
-Verification Method
-Outcome
-Ethernet Interface Check
-✅ Passed
-ip addr show eth0
-Interface detected with 10.0.0.2/24
-IP Address Validation
-✅ Passed
-ip -4 addr show eth0
-Static IPv4 address verified
-Routing Configuration
-✅ Passed
-ip route
-Default route through 10.0.0.1 verified
-Local Gateway Test
-✅ Passed
-ping -c 4 10.0.0.1
-Successful replies received from gateway
-External Network Test
-✅ Passed
-ping -c 4 8.8.8.8
-External connectivity successfully verified
-NAT Network Verification
-✅ Passed
-VirtualBox → Network Manager
-NatNetwork configured and active
-Network Availability
-✅ Passed
-ip link show eth0
-Ethernet interface confirmed operational
+## Verification & Testing
 
+| Verification Item | Status | Verification Method | Outcome |
+|---|---|---|---|
+| Ethernet Interface Check | ✅ Passed | `ip addr show eth0` | Interface detected with 10.0.0.2/24 |
+| IP Address Validation | ✅ Passed | `ip -4 addr show eth0` | Static IPv4 address verified |
+| Routing Configuration | ✅ Passed | `ip route` | Default route through 10.0.0.1 confirmed |
+| Local Gateway Test | ✅ Passed | `ping -c 4 10.0.0.1` | Successful replies received from gateway |
+| Internet Connectivity Test | ✅ Passed | `ping -c 4 8.8.8.8` | External connectivity successfully verified |
+| NAT Network Verification | ✅ Passed | VirtualBox Network Manager | NAT network configured and active |
+| Network Interface Status | ✅ Passed | `ip link show eth0` | Ethernet interface confirmed operational |
 
+## Problems Encountered & Solutions
+
+Documenting the problems faced during the lab setup helps explain how the issues were identified and solved.
+
+## Problem 1. Kali Linux Virtual Machine Import Issue
+
+While setting up the Kali Linux virtual machine in VirtualBox, the downloaded Kali VM file was in a compressed format and could not be used directly.
+
+## Solution:
+
+1. Installed 7-Zip to extract the downloaded file.
+2. Extracted the Kali Linux virtual-machine package.
+3. Opened VirtualBox and selected Import Appliance.
+4. Selected the extracted Kali VM file.
+5. Completed the import process and started the virtual machine.
+After these steps, Kali Linux was successfully imported and started in VirtualBox.
+
+## Problem 2. Network Configuration Issue
+
+During the network setup, the Kali Linux system did not initially have the required network configuration for the lab.
+
+## Solution:
+
+1. Configured the VirtualBox NAT Network.
+2. Connected the Kali Linux VM to the NAT Network.
+3. Checked the network interface using "ip addr".
+4. Configured the required IP address.
+5. Verified the default gateway using "ip route".
+6. Tested the connection using the "ping" command.
+After configuration, the Kali Linux VM successfully communicated with the gateway and Internet.
+
+## Problem 3. Continuous Ping Command
+While testing network connectivity, the ping command continued running and did not stop automatically.
+
+## Solution:
+The continuous ping was stopped by pressing:
+"Ctrl + C"
+The command then stopped and returned to the Kali Linux terminal.
+## Security Considerations
+⚠️ IMPORTANT: This laboratory is designed for controlled environments only.
+
+|Consideration|Description|
+|---|---|
+|Network Isolation|NAT Network isolates VMs from host network|
+|No DHCP |Static configuration reduces attack surface|
+|Ethical Use|Testing only on systems you own or have explicit permission to test|
 
