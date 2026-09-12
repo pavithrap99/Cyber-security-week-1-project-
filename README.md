@@ -64,7 +64,7 @@ To extract the kali Linux VM package install the 7-zip file.
 ### step 2.Install Virtual Box and Kali linux
 virtual box was installed to run the Kali Linux in Virtual Machine.It was a hyperveisor.
 ## Screenshot
-![Kali Linux]()
+![Kali Linux](https://github.com/pavithrap99/Cyber-security-week-1-project-/blob/cf48f3ea6114a61546366e9d87c6c2c917f80f50/01_kali%20linux.png)
 ### step 3.VB NAT Network Configuration
 A dedicated VB NAT Network was created with the configuration.
 
