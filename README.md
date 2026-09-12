@@ -180,9 +180,9 @@ The Cybersecurity Laboratory Environment was successfully established using Orac
 
 This laboratory environment provides a secure, isolated, and controlled platform for cybersecurity training, security testing, and research activities.
 ## Author
-## Author
 
 **Pavithra P**  
 *Cybersecurity Student*
-[GitHub]() | [LinkedIn]()
+
+[GitHub](https://github.com/pavithrap99) | [LinkedIn](http://linkedin.com/in/pavithra-p-202131427/)
 
